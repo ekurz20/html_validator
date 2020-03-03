@@ -10,6 +10,8 @@ def validate_html(html):
     >>> validate_html('<strong>example')
     False
     '''
+    if len(html)==0:
+        return True
     a = _extract_tags(html)
     if len(a)%2 == 0:
         return True
