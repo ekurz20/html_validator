@@ -36,6 +36,8 @@ def _extract_tags(html):
     ['<strong>', '</strong>']
     '''
     ans = []
+    if len(html)==0:
+        return ans
     isHTML = False
     for ch in html:
         if ch=='<':
