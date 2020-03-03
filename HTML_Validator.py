@@ -49,7 +49,10 @@ def _extract_tags(html):
             isHTML = False
         if isHTML==True and ch!='>':
             ans+=ch
-    ans = ans.split('%')
+    if ans == []:
+        return ans
+    else:
+        ans = ans.split('%')
     ans = list(filter(None,ans))
     return ans
             
